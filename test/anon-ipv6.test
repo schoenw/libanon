@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Shell script for regression testing libanon (anon-ipv6).
+#
+# $Id$
+#
+
+ANON=../src/anon
+PASSPHRASE=testing
+
+RC=0
+for file in anon-ipv6.*.in; do
+    $ANON ipv6 -p $PASSPHRASE $file \
+	| diff -u `basename $file .in`.out -
+    if [ $? -ne 0 ]; then
+ 	RC=1
+    fi
+done
+
+exit ${RC}

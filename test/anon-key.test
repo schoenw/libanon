@@ -1,0 +1,19 @@
+#!/bin/bash
+#
+# Shell script for regression testing libanon (anon-key).
+#
+# $Id$
+#
+
+ANON=../src/anon
+
+RC=0
+for file in anon-key.*.in; do
+    $ANON key $file \
+	| diff -u `basename $file .in`.out -
+    if [ $? -ne 0 ]; then
+ 	RC=1
+    fi
+done
+
+exit ${RC}

@@ -1,0 +1,20 @@
+#!/bin/bash
+#
+# Shell script for regression testing libanon (anon-ipv4-l).
+#
+# $Id$
+#
+
+ANON=../src/anon
+PASSPHRASE=testing
+
+RC=0
+for file in anon-ipv4-l.*.in; do
+    $ANON ipv4 -p $PASSPHRASE -l $file \
+	| diff -u `basename $file .in`.out -
+    if [ $? -ne 0 ]; then
+ 	RC=1
+    fi
+done
+
+exit ${RC}
