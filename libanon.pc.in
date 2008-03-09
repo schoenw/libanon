@@ -8,5 +8,4 @@ Description: library of reusable anonymiztion functions
 Requires: openssl
 Version: @VERSION@
 Libs: -L${libdir} -lanon
-Cflags: -I${includedir}/libanon.h
-
+Cflags: -I${includedir}
