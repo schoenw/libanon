@@ -2,12 +2,9 @@ Begin3
 Title:		libanon
 Version:	@VERSION@
 Entered-date:	@ISODATE@
-Description:	library of reusable anonymiztion functions
-		@configure_input@
-		Please edit libanon.lsm.in to fix the Keywords and
-		Primary-site entries, add several more lines of
-		description here if appropriate, and to delete these
-		instructions.
+Description:	The libanon library is a collection of reusable anonymiztion
+	        functions for numbers, strings and network specific data
+		types such as IP addresses or MAC addresses.
 Keywords:	[substitute your keywords here]
 Author: 	j.schoenwaelder@jacobs-university.de (Juergen Schoenwaelder)
 		m.harvan@jacobs-university.de (Matus Harvan)
@@ -18,5 +15,5 @@ Primary-site:	metlab.unc.edu pub/Linux/apps/some/directory
 Alternate-site: 
 Original-site:  
 Platforms:      
-Copying-policy:	GNU copyleft
+Copying-policy:	Gnu Lesser General Public License (GLPL) 2.0
 End
