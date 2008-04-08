@@ -13,7 +13,6 @@ INCLUDES                = $(OPENSSL_CFLAGS)
 
 bin_PROGRAMS		= anon
 anon_SOURCES		= anon.c anon.1 \
-			  xmalloc.c system.h \
 			  getopt.c getopt1.c getopt.h
 anon_LDADD		= libanon.la $(OPENSSL_LIBS) -lpcap
 
